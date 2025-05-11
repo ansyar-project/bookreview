@@ -1,0 +1,138 @@
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css" layer(utilities);
+/* Tailwind CSS classes for your HTML structure */
+
+/* Custom styles */
+body {
+    @apply justify-items-center min-h-screen flex flex-col bg-gray-50 text-gray-900 font-sans ;
+}
+
+header {
+    @apply bg-blue-600 text-white p-4;
+}
+
+nav {
+    @apply flex justify-center;
+}
+
+nav a {
+    @apply mx-4 text-lg hover:underline transition-all duration-300 ease-in-out;
+}
+
+main {
+    @apply max-w-5xl flex-grow p-6 mx-auto w-full;
+}
+
+h1 {
+    @apply text-3xl font-semibold mb-4;
+}
+
+p {
+    @apply text-lg mb-6;
+}
+
+section {
+    @apply bg-white p-6 rounded-lg shadow-md;
+}
+
+h2 {
+    @apply text-2xl font-bold mb-4;
+}
+
+ul {
+    @apply space-y-4;
+}
+
+.review-item {
+    @apply w-full bg-gray-100 p-4 rounded-lg shadow-lg transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl;
+}
+
+.review-header {
+    @apply flex items-start w-full mb-4;
+}
+
+.book-cover {
+    @apply w-40 h-60 object-cover rounded-lg mr-6;
+}
+
+.review-details {
+    @apply flex flex-col justify-center w-full;
+}
+
+.review-title {
+    @apply text-xl font-semibold;
+}
+
+.review-content {
+    @apply flex-grow text-sm text-gray-700 mt-2;
+}
+
+.button-group {
+    @apply flex space-x-2 w-full justify-start mt-4 ml-0;
+}
+
+button {
+    @apply py-2 px-4 rounded-md transition-all duration-200 ease-in-out w-1/12;
+}
+
+.edit-button {
+    @apply bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
+
+.delete-button {
+    @apply bg-red-600 text-white hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500;
+}
+
+footer {
+    @apply bg-gray-800 text-white text-center py-4 mt-8;
+}
+
+footer p {
+    @apply text-sm;
+}
+
+.review-info {
+    @apply flex flex-row justify-evenly mt-2 text-sm text-gray-600;
+}
+
+.review-info p {
+    @apply mb-2;
+}
+
+.review-rating, .review-read-date, .review-isbn {
+    @apply font-medium text-sm text-gray-600 ml-4;
+}
+
+.book-form-body {
+  @apply bg-gray-100 min-h-screen flex flex-col items-center justify-center p-6 font-sans;
+}
+
+.form-container {
+  @apply bg-white flex-grow p-8 rounded-lg shadow-md w-full max-w-2xl mx-auto;
+}
+
+.form-title {
+  @apply text-2xl font-bold mb-6 text-center;
+}
+
+.form {
+  @apply space-y-4;
+}
+
+.form-label {
+  @apply block text-sm font-medium text-gray-700;
+}
+
+.form-input {
+  @apply mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500;
+}
+
+.submit-container {
+  @apply flex justify-end;
+}
+
+.submit-button {
+  @apply bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 w-fit;
+}

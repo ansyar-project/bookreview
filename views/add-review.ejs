@@ -1,0 +1,42 @@
+<%- include('partials/header') %>
+<main class="main">
+<div class="form-container">
+    <h1 class="form-title">Post a Book Review</h1>
+    <form action="/add-review" method="POST" class="form">
+      
+      <div>
+        <label for="title" class="form-label">Title</label>
+        <input type="text" id="title" name="title" required class="form-input">
+      </div>
+
+      <div>
+        <label for="review" class="form-label">Review</label>
+        <textarea id="review" name="review" rows="4" required class="form-input"></textarea>
+      </div>
+
+      <div>
+        <label for="ISBN" class="form-label">ISBN</label>
+        <input type="text" id="ISBN" name="ISBN" class="form-input">
+      </div>
+
+      <div>
+        <label for="rating" class="form-label">Rating (1–5)</label>
+        <input type="number" id="rating" name="rating" min="1" max="5" required class="form-input">
+      </div>
+
+      <div>
+        <label for="read_date" class="form-label">Read Date</label>
+        <input type="date" id="read_date" name="read_date" class="form-input">
+      </div>
+
+      <div class="submit-container">
+        <button type="submit" class="submit-button">Submit</button>
+      </div>
+    </form>
+  </div>
+</main>
+
+
+
+
+<%- include('partials/footer') %>

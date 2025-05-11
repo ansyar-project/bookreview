@@ -1,0 +1,45 @@
+
+<%- include('partials/header') %>    
+    <main class="main">
+        <h1 class="main-title">Welcome to Book Reviews</h1>
+        <p class="main-description">Explore and share reviews of your favorite books!</p>
+        <section class="reviews-section">
+            <h2 class="section-title">Book Reviews</h2>
+            <ul class="reviews-list">
+                <!-- Example of a book review -->
+                 <% for (let book of books) { %>
+                <li class="review-item">
+                    <div class="review-header">
+                        <!-- Book Cover -->
+                        <img src="<%= book.image_url %>" alt="Book Cover" class="book-cover">
+
+                        <!-- Review Details -->
+                        <div class="review-details">
+                            <h3 class="review-title"><%= book.title %></h3>
+                            <p class="review-content"><%= book.review %></p>
+                        </div>
+                    </div>
+
+                    <!-- Buttons: Edit/Delete -->
+                    <div class="button-group">
+                        <button class="edit-button" onclick="window.location.href='/edit-review?id=<%= book.id %>'">Edit</button>
+                        <button class="delete-button" onclick="window.location.href='/delete-review?id=<%= book.id %>'">Delete</button>
+                        <p class="review-rating">
+                            <strong>Rating:</strong> <%= book.rating %> / 5
+                        </p>
+                        <p class="review-read-date">
+                            <strong>Read Date:</strong> <%= book.read_date_text %>
+                        </p>
+                        <p class="review-isbn">
+                            <strong>ISBN:</strong> <%= book.ISBN %>
+                        </p>
+                    </div>
+                </li>
+                
+                <!-- Repeat for other reviews -->
+                 <% } %>
+            </ul>
+        </section>
+    </main>
+
+<%- include('partials/footer') %>
